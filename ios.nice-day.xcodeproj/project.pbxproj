@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC942FC9231E4FC900737528 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FC8231E4FC900737528 /* AppDelegate.swift */; };
+		AC942FCB231E4FC900737528 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FCA231E4FC900737528 /* ViewController.swift */; };
+		AC942FCE231E4FC900737528 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC942FCC231E4FC900737528 /* Main.storyboard */; };
+		AC942FD0231E4FCA00737528 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC942FCF231E4FCA00737528 /* Assets.xcassets */; };
+		AC942FD3231E4FCA00737528 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC942FD1231E4FCA00737528 /* LaunchScreen.storyboard */; };
+		AC942FDE231E4FCA00737528 /* ios_nice_dayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FDD231E4FCA00737528 /* ios_nice_dayTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC942FDA231E4FCA00737528 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC942FBD231E4FC900737528 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC942FC4231E4FC900737528;
+			remoteInfo = "ios.nice-day";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AC942FC5231E4FC900737528 /* ios.nice-day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios.nice-day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC942FC8231E4FC900737528 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AC942FCA231E4FC900737528 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC942FCD231E4FC900737528 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC942FCF231E4FCA00737528 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC942FD2231E4FCA00737528 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AC942FD4231E4FCA00737528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC942FD9231E4FCA00737528 /* ios.nice-dayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios.nice-dayTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC942FDD231E4FCA00737528 /* ios_nice_dayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_nice_dayTests.swift; sourceTree = "<group>"; };
+		AC942FDF231E4FCA00737528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC942FC2231E4FC900737528 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC942FD6231E4FCA00737528 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC942FBC231E4FC900737528 = {
+			isa = PBXGroup;
+			children = (
+				AC942FC7231E4FC900737528 /* ios.nice-day */,
+				AC942FDC231E4FCA00737528 /* ios.nice-dayTests */,
+				AC942FC6231E4FC900737528 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC942FC6231E4FC900737528 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC942FC5231E4FC900737528 /* ios.nice-day.app */,
+				AC942FD9231E4FCA00737528 /* ios.nice-dayTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC942FC7231E4FC900737528 /* ios.nice-day */ = {
+			isa = PBXGroup;
+			children = (
+				AC942FC8231E4FC900737528 /* AppDelegate.swift */,
+				AC942FCA231E4FC900737528 /* ViewController.swift */,
+				AC942FCC231E4FC900737528 /* Main.storyboard */,
+				AC942FCF231E4FCA00737528 /* Assets.xcassets */,
+				AC942FD1231E4FCA00737528 /* LaunchScreen.storyboard */,
+				AC942FD4231E4FCA00737528 /* Info.plist */,
+			);
+			path = "ios.nice-day";
+			sourceTree = "<group>";
+		};
+		AC942FDC231E4FCA00737528 /* ios.nice-dayTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC942FDD231E4FCA00737528 /* ios_nice_dayTests.swift */,
+				AC942FDF231E4FCA00737528 /* Info.plist */,
+			);
+			path = "ios.nice-dayTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC942FC4231E4FC900737528 /* ios.nice-day */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC942FE2231E4FCA00737528 /* Build configuration list for PBXNativeTarget "ios.nice-day" */;
+			buildPhases = (
+				AC942FC1231E4FC900737528 /* Sources */,
+				AC942FC2231E4FC900737528 /* Frameworks */,
+				AC942FC3231E4FC900737528 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ios.nice-day";
+			productName = "ios.nice-day";
+			productReference = AC942FC5231E4FC900737528 /* ios.nice-day.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC942FD8231E4FCA00737528 /* ios.nice-dayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC942FE5231E4FCA00737528 /* Build configuration list for PBXNativeTarget "ios.nice-dayTests" */;
+			buildPhases = (
+				AC942FD5231E4FCA00737528 /* Sources */,
+				AC942FD6231E4FCA00737528 /* Frameworks */,
+				AC942FD7231E4FCA00737528 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC942FDB231E4FCA00737528 /* PBXTargetDependency */,
+			);
+			name = "ios.nice-dayTests";
+			productName = "ios.nice-dayTests";
+			productReference = AC942FD9231E4FCA00737528 /* ios.nice-dayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC942FBD231E4FC900737528 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Frank van Boheemen";
+				TargetAttributes = {
+					AC942FC4231E4FC900737528 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					AC942FD8231E4FCA00737528 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = AC942FC4231E4FC900737528;
+					};
+				};
+			};
+			buildConfigurationList = AC942FC0231E4FC900737528 /* Build configuration list for PBXProject "ios.nice-day" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC942FBC231E4FC900737528;
+			productRefGroup = AC942FC6231E4FC900737528 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC942FC4231E4FC900737528 /* ios.nice-day */,
+				AC942FD8231E4FCA00737528 /* ios.nice-dayTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC942FC3231E4FC900737528 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC942FD3231E4FCA00737528 /* LaunchScreen.storyboard in Resources */,
+				AC942FD0231E4FCA00737528 /* Assets.xcassets in Resources */,
+				AC942FCE231E4FC900737528 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC942FD7231E4FCA00737528 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC942FC1231E4FC900737528 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC942FCB231E4FC900737528 /* ViewController.swift in Sources */,
+				AC942FC9231E4FC900737528 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC942FD5231E4FCA00737528 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC942FDE231E4FCA00737528 /* ios_nice_dayTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC942FDB231E4FCA00737528 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC942FC4231E4FC900737528 /* ios.nice-day */;
+			targetProxy = AC942FDA231E4FCA00737528 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AC942FCC231E4FC900737528 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC942FCD231E4FC900737528 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AC942FD1231E4FCA00737528 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC942FD2231E4FCA00737528 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC942FE0231E4FCA00737528 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AC942FE1231E4FCA00737528 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC942FE3231E4FCA00737528 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L695Y8XJX3;
+				INFOPLIST_FILE = "ios.nice-day/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.frankvanboheemen.ios-nice-day";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC942FE4231E4FCA00737528 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L695Y8XJX3;
+				INFOPLIST_FILE = "ios.nice-day/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.frankvanboheemen.ios-nice-day";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AC942FE6231E4FCA00737528 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L695Y8XJX3;
+				INFOPLIST_FILE = "ios.nice-dayTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.frankvanboheemen.ios-nice-dayTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios.nice-day.app/ios.nice-day";
+			};
+			name = Debug;
+		};
+		AC942FE7231E4FCA00737528 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L695Y8XJX3;
+				INFOPLIST_FILE = "ios.nice-dayTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.frankvanboheemen.ios-nice-dayTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios.nice-day.app/ios.nice-day";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC942FC0231E4FC900737528 /* Build configuration list for PBXProject "ios.nice-day" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC942FE0231E4FCA00737528 /* Debug */,
+				AC942FE1231E4FCA00737528 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC942FE2231E4FCA00737528 /* Build configuration list for PBXNativeTarget "ios.nice-day" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC942FE3231E4FCA00737528 /* Debug */,
+				AC942FE4231E4FCA00737528 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC942FE5231E4FCA00737528 /* Build configuration list for PBXNativeTarget "ios.nice-dayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC942FE6231E4FCA00737528 /* Debug */,
+				AC942FE7231E4FCA00737528 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC942FBD231E4FC900737528 /* Project object */;
+}
