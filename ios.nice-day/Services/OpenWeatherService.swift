@@ -11,12 +11,14 @@ import SwiftyJSON
 import Alamofire
 
 class OpenWeatherService {
-    private let baseURL = "https://api.openweathermap.org/data/2.5/"
+    private let urlScheme = "https"
+    private let urlBase = "api.openweathermap.org"
+    private let urlPath = "/data/2.5/weather"
     private let apiKey = "4d664c7f4176c7a3cc0dbcf5654158ad"
     
     func weatherForCoordinates(latitude: CGFloat = 52.37, longitude: CGFloat = 4.89, completion: @escaping (Any?, Error?) -> ()) {
-        let url = "\(baseURL)weather?lat=\(latitude)&lon=\(longitude)&APPID=\(apiKey)"
-        
+        guard let url = URL.constructURL(scheme: urlScheme, host: urlBase, path: urlPath, queryItems: ["lon" : "\(longitude)", "lat" : "\(latitude)", "APPID" : "\(apiKey)"]) else { return }
+                
         Alamofire.request(url).responseJSON { response in
             switch response.result {
             case .success(let result):

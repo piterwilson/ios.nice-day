@@ -17,6 +17,7 @@
 		AC942FF7231E521C00737528 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FF3231E521C00737528 /* MainRouter.swift */; };
 		AC942FF8231E521C00737528 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FF4231E521C00737528 /* MainViewController.swift */; };
 		AC942FFC231E570A00737528 /* OpenWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FFB231E570A00737528 /* OpenWeatherService.swift */; };
+		AC942FFE231E5A7C00737528 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FFD231E5A7C00737528 /* URL+Extension.swift */; };
 		B47CE5BD79823C2C4E31ED9F /* Pods_ios_nice_day.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C973405073A4E6F44F8AD3 /* Pods_ios_nice_day.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		AC942FF3231E521C00737528 /* MainRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		AC942FF4231E521C00737528 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AC942FFB231E570A00737528 /* OpenWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherService.swift; sourceTree = "<group>"; };
+		AC942FFD231E5A7C00737528 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,10 +151,19 @@
 		AC942FF0231E51F500737528 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				AC942FFF231E5A8400737528 /* Extensions */,
 				AC942FD1231E4FCA00737528 /* LaunchScreen.storyboard */,
 				AC942FCF231E4FCA00737528 /* Assets.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		AC942FFF231E5A8400737528 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AC942FFD231E5A7C00737528 /* URL+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		EDCB6F1C92BF6C74C180095A /* Pods */ = {
@@ -314,6 +325,7 @@
 				AC942FFC231E570A00737528 /* OpenWeatherService.swift in Sources */,
 				AC942FF5231E521C00737528 /* MainPresenter.swift in Sources */,
 				AC942FF6231E521C00737528 /* MainInteractor.swift in Sources */,
+				AC942FFE231E5A7C00737528 /* URL+Extension.swift in Sources */,
 				AC942FF8231E521C00737528 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
