@@ -16,13 +16,14 @@ class OpenWeatherService {
     private let urlPath = "/data/2.5/weather"
     private let apiKey = "4d664c7f4176c7a3cc0dbcf5654158ad"
     
-    func weatherForCoordinates(latitude: CGFloat = 52.37, longitude: CGFloat = 4.89, completion: @escaping (Any?, Error?) -> ()) {
+    func weatherForCoordinates(latitude: CGFloat = 52.37, longitude: CGFloat = 4.89, completion: @escaping (Weather?, Error?) -> ()) {
         guard let url = URL.constructURL(scheme: urlScheme, host: urlBase, path: urlPath, queryItems: ["lon" : "\(longitude)", "lat" : "\(latitude)", "APPID" : "\(apiKey)"]) else { return }
                 
         Alamofire.request(url).responseJSON { response in
             switch response.result {
             case .success(let result):
-                completion(result, nil)
+                let weather = Weather(data: result)
+                completion(weather, nil)
             case .failure(let error):
                 completion(nil, error)
             }
