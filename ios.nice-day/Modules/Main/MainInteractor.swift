@@ -36,7 +36,7 @@ class MainInteractor {
     let preferredMaxWindSpeed: Double = 8
     let preferredMaxCloudiness: Double = 0.2
     
-    func qualify(weather: Weather) {
+    private func qualify(weather: Weather) {
         var weatherRating = 10
         
         weatherRating -= determinePenalty(weatherCharacteristic: weather.temp, preference: preferredMinTemp, preferenceType: .minValue)
@@ -63,7 +63,7 @@ class MainInteractor {
                     penalty = floor(weatherCharacteristic / 10) < 2 ? Int(weatherCharacteristic / 10) : 2
                 } else {
                     let deviation : Double = (preference - weatherCharacteristic) / preference
-                    penalty = ceil(deviation * 10) < 2 ? Int(ceil(deviation * 10)) : 2
+                    penalty = floor(deviation * 10) < 2 ? Int(floor(deviation * 10)) : 2
                 }
             } else {
                 penalty = 0
@@ -74,7 +74,7 @@ class MainInteractor {
                     penalty = floor(weatherCharacteristic / 10) < 2 ? Int(weatherCharacteristic / 10) : 2
                 } else {
                     let deviation : Double = Double((weatherCharacteristic - preference) / preference)
-                    penalty = ceil(deviation * 10) < 2 ? Int(ceil(deviation * 10)) : 2
+                    penalty = floor(deviation * 10) < 2 ? Int(floor(deviation * 10)) : 2
                 }
             } else {
                 penalty = 0
