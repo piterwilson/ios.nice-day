@@ -9,6 +9,7 @@
 import Foundation
 import MapKit
 import CoreLocation
+import Network
 
 protocol MainInteractorDelegate {
     
@@ -18,8 +19,25 @@ class MainInteractor: NSObject {
     var presenter: MainInteractorDelegate?
     var openWeatherService: OpenWeatherService?
     var locationManager: CLLocationManager?
+    var monitor: NWPathMonitor?
+    
+    override init() {
+        super.init()
+        startMonitoringInternetConnection()
+    }
+    
+    private func startMonitoringInternetConnection() {
+        monitor = NWPathMonitor()
+        let queue = DispatchQueue(label: "Monitor")
+        monitor?.start(queue: queue)
+    }
     
     func qualifyWeatherAtCurrentLocation() {
+        guard let connectivityStatus = monitor?.currentPath.status, connectivityStatus == .satisfied else {
+            //TODO: Tell the user there is no connection to the internet
+            return
+        }
+
         locationManager = CLLocationManager()
         locationManager?.requestWhenInUseAuthorization()
         if CLLocationManager.locationServicesEnabled() {
