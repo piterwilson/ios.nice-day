@@ -18,6 +18,7 @@
 		AC942FF8231E521C00737528 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FF4231E521C00737528 /* MainViewController.swift */; };
 		AC942FFC231E570A00737528 /* OpenWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FFB231E570A00737528 /* OpenWeatherService.swift */; };
 		AC942FFE231E5A7C00737528 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FFD231E5A7C00737528 /* URL+Extension.swift */; };
+		AC943001231E60B500737528 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC943000231E60B500737528 /* Weather.swift */; };
 		B47CE5BD79823C2C4E31ED9F /* Pods_ios_nice_day.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C973405073A4E6F44F8AD3 /* Pods_ios_nice_day.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		AC942FF4231E521C00737528 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AC942FFB231E570A00737528 /* OpenWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherService.swift; sourceTree = "<group>"; };
 		AC942FFD231E5A7C00737528 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		AC943000231E60B500737528 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 		AC942FF0231E51F500737528 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				AC943002231E60BB00737528 /* Structs */,
 				AC942FFF231E5A8400737528 /* Extensions */,
 				AC942FD1231E4FCA00737528 /* LaunchScreen.storyboard */,
 				AC942FCF231E4FCA00737528 /* Assets.xcassets */,
@@ -164,6 +167,14 @@
 				AC942FFD231E5A7C00737528 /* URL+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AC943002231E60BB00737528 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				AC943000231E60B500737528 /* Weather.swift */,
+			);
+			path = Structs;
 			sourceTree = "<group>";
 		};
 		EDCB6F1C92BF6C74C180095A /* Pods */ = {
@@ -320,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC943001231E60B500737528 /* Weather.swift in Sources */,
 				AC942FC9231E4FC900737528 /* AppDelegate.swift in Sources */,
 				AC942FF7231E521C00737528 /* MainRouter.swift in Sources */,
 				AC942FFC231E570A00737528 /* OpenWeatherService.swift in Sources */,
