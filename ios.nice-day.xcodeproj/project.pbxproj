@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		AC942FC9231E4FC900737528 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FC8231E4FC900737528 /* AppDelegate.swift */; };
-		AC942FCB231E4FC900737528 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FCA231E4FC900737528 /* ViewController.swift */; };
 		AC942FCE231E4FC900737528 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC942FCC231E4FC900737528 /* Main.storyboard */; };
 		AC942FD0231E4FCA00737528 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC942FCF231E4FCA00737528 /* Assets.xcassets */; };
 		AC942FD3231E4FCA00737528 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC942FD1231E4FCA00737528 /* LaunchScreen.storyboard */; };
 		AC942FDE231E4FCA00737528 /* ios_nice_dayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FDD231E4FCA00737528 /* ios_nice_dayTests.swift */; };
+		AC942FF5231E521C00737528 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FF1231E521C00737528 /* MainPresenter.swift */; };
+		AC942FF6231E521C00737528 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FF2231E521C00737528 /* MainInteractor.swift */; };
+		AC942FF7231E521C00737528 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FF3231E521C00737528 /* MainRouter.swift */; };
+		AC942FF8231E521C00737528 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FF4231E521C00737528 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +31,6 @@
 /* Begin PBXFileReference section */
 		AC942FC5231E4FC900737528 /* ios.nice-day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios.nice-day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC942FC8231E4FC900737528 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC942FCA231E4FC900737528 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC942FCD231E4FC900737528 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC942FCF231E4FCA00737528 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC942FD2231E4FCA00737528 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +38,10 @@
 		AC942FD9231E4FCA00737528 /* ios.nice-dayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios.nice-dayTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC942FDD231E4FCA00737528 /* ios_nice_dayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_nice_dayTests.swift; sourceTree = "<group>"; };
 		AC942FDF231E4FCA00737528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC942FF1231E521C00737528 /* MainPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		AC942FF2231E521C00737528 /* MainInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		AC942FF3231E521C00737528 /* MainRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		AC942FF4231E521C00737528 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,10 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				AC942FC8231E4FC900737528 /* AppDelegate.swift */,
-				AC942FCA231E4FC900737528 /* ViewController.swift */,
-				AC942FCC231E4FC900737528 /* Main.storyboard */,
-				AC942FCF231E4FCA00737528 /* Assets.xcassets */,
-				AC942FD1231E4FCA00737528 /* LaunchScreen.storyboard */,
+				AC942FED231E51BB00737528 /* Modules */,
+				AC942FEF231E51EB00737528 /* Services */,
+				AC942FF0231E51F500737528 /* Assets */,
 				AC942FD4231E4FCA00737528 /* Info.plist */,
 			);
 			path = "ios.nice-day";
@@ -94,6 +99,42 @@
 				AC942FDF231E4FCA00737528 /* Info.plist */,
 			);
 			path = "ios.nice-dayTests";
+			sourceTree = "<group>";
+		};
+		AC942FED231E51BB00737528 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				AC942FEE231E51E000737528 /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		AC942FEE231E51E000737528 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AC942FCC231E4FC900737528 /* Main.storyboard */,
+				AC942FF2231E521C00737528 /* MainInteractor.swift */,
+				AC942FF1231E521C00737528 /* MainPresenter.swift */,
+				AC942FF3231E521C00737528 /* MainRouter.swift */,
+				AC942FF4231E521C00737528 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		AC942FEF231E51EB00737528 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AC942FF0231E51F500737528 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				AC942FD1231E4FCA00737528 /* LaunchScreen.storyboard */,
+				AC942FCF231E4FCA00737528 /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +238,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC942FCB231E4FC900737528 /* ViewController.swift in Sources */,
 				AC942FC9231E4FC900737528 /* AppDelegate.swift in Sources */,
+				AC942FF7231E521C00737528 /* MainRouter.swift in Sources */,
+				AC942FF5231E521C00737528 /* MainPresenter.swift in Sources */,
+				AC942FF6231E521C00737528 /* MainInteractor.swift in Sources */,
+				AC942FF8231E521C00737528 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
