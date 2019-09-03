@@ -10,13 +10,15 @@ import Foundation
 
 class MainPresenter {
     weak var viewController: MainViewController?
-    weak var interactor: MainInteractor?
-    weak var router: MainRouter?
-    
+    var interactor: MainInteractor?
+    var router: MainRouter?
 }
 
 extension MainPresenter: MainViewControllerDelegate {
-    
+    //MARK: - MainViewControllerDelegate
+    func viewDidLoad() {
+        interactor?.qualifyWeatherAtCurrentLocation()
+    }
 }
 
 extension MainPresenter: MainInteractorDelegate {

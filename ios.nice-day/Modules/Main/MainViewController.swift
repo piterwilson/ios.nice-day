@@ -9,7 +9,7 @@
 import UIKit
 
 protocol MainViewControllerDelegate {
-    
+    func viewDidLoad()
 }
 
 class MainViewController: UIViewController {
@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        delegate?.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     

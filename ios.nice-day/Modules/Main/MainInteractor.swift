@@ -7,25 +7,27 @@
 //
 
 import Foundation
+import MapKit
+import CoreLocation
 
 protocol MainInteractorDelegate {
     
 }
 
-class MainInteractor {
+class MainInteractor: NSObject {
     var presenter: MainInteractorDelegate?
     var openWeatherService: OpenWeatherService?
+    var locationManager: CLLocationManager?
     
-    init() {
-        openWeatherService = OpenWeatherService()
-        openWeatherService?.weatherForCoordinates() { (response, error) in
-            guard let weather = response else {
-                print("\(error)")
-                return
-            }
-//            print("\(response)")
-            self.qualify(weather: weather)
+    func qualifyWeatherAtCurrentLocation() {
+        locationManager = CLLocationManager()
+        locationManager?.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager?.delegate = self
+            locationManager?.desiredAccuracy = kCLLocationAccuracyHundredMeters
+            locationManager?.requestLocation()
         }
+        openWeatherService = OpenWeatherService()
     }
     
     //Temporary hardcoded preference
@@ -83,4 +85,24 @@ class MainInteractor {
         
         return penalty
     }
+}
+
+extension MainInteractor: CLLocationManagerDelegate {
+    //MARK: - CLLocationManagerDelegate
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        openWeatherService?.weatherForCoordinates(latitude: Float(locValue.latitude), longitude: Float(locValue.longitude)) { (response, error) in
+            guard let weather = response else {
+                print("\(error)")
+                return
+            }
+            //            print("\(response)")
+            self.qualify(weather: weather)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Failed to find user's location: \(error.localizedDescription)")
+    }
+    
 }
