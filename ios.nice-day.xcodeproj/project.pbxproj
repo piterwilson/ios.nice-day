@@ -16,6 +16,7 @@
 		AC942FF6231E521C00737528 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FF2231E521C00737528 /* MainInteractor.swift */; };
 		AC942FF7231E521C00737528 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FF3231E521C00737528 /* MainRouter.swift */; };
 		AC942FF8231E521C00737528 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FF4231E521C00737528 /* MainViewController.swift */; };
+		B47CE5BD79823C2C4E31ED9F /* Pods_ios_nice_day.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C973405073A4E6F44F8AD3 /* Pods_ios_nice_day.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0ED07BF7B0A08EC0EC6613B6 /* Pods-ios.nice-day.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.nice-day.release.xcconfig"; path = "Target Support Files/Pods-ios.nice-day/Pods-ios.nice-day.release.xcconfig"; sourceTree = "<group>"; };
+		18C973405073A4E6F44F8AD3 /* Pods_ios_nice_day.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_nice_day.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CC59E5A893343FFC7405D3F /* Pods-ios.nice-day.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.nice-day.debug.xcconfig"; path = "Target Support Files/Pods-ios.nice-day/Pods-ios.nice-day.debug.xcconfig"; sourceTree = "<group>"; };
 		AC942FC5231E4FC900737528 /* ios.nice-day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios.nice-day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC942FC8231E4FC900737528 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC942FCD231E4FC900737528 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B47CE5BD79823C2C4E31ED9F /* Pods_ios_nice_day.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,12 +67,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03DFD36EA133167E0E65D21C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18C973405073A4E6F44F8AD3 /* Pods_ios_nice_day.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AC942FBC231E4FC900737528 = {
 			isa = PBXGroup;
 			children = (
 				AC942FC7231E4FC900737528 /* ios.nice-day */,
 				AC942FDC231E4FCA00737528 /* ios.nice-dayTests */,
 				AC942FC6231E4FC900737528 /* Products */,
+				EDCB6F1C92BF6C74C180095A /* Pods */,
+				03DFD36EA133167E0E65D21C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +152,16 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		EDCB6F1C92BF6C74C180095A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1CC59E5A893343FFC7405D3F /* Pods-ios.nice-day.debug.xcconfig */,
+				0ED07BF7B0A08EC0EC6613B6 /* Pods-ios.nice-day.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +169,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC942FE2231E4FCA00737528 /* Build configuration list for PBXNativeTarget "ios.nice-day" */;
 			buildPhases = (
+				47E6106BA7356094B9137F5A /* [CP] Check Pods Manifest.lock */,
 				AC942FC1231E4FC900737528 /* Sources */,
 				AC942FC2231E4FC900737528 /* Frameworks */,
 				AC942FC3231E4FC900737528 /* Resources */,
+				30D924EBA5CBE591B4BED5D0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +259,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		30D924EBA5CBE591B4BED5D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios.nice-day/Pods-ios.nice-day-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios.nice-day/Pods-ios.nice-day-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ios.nice-day/Pods-ios.nice-day-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47E6106BA7356094B9137F5A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ios.nice-day-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AC942FC1231E4FC900737528 /* Sources */ = {
@@ -402,6 +471,7 @@
 		};
 		AC942FE3231E4FCA00737528 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CC59E5A893343FFC7405D3F /* Pods-ios.nice-day.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -420,6 +490,7 @@
 		};
 		AC942FE4231E4FCA00737528 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ED07BF7B0A08EC0EC6613B6 /* Pods-ios.nice-day.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
