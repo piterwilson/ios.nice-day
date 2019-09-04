@@ -1,0 +1,6 @@
+framework module Pods_ios_nice_day {
+  umbrella header "Pods-ios.nice-day-umbrella.h"
+
+  export *
+  module * { export * }
+}
