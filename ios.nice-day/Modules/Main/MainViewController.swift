@@ -10,6 +10,7 @@ import UIKit
 
 protocol MainViewControllerDelegate {
     func viewDidLoad()
+    func refreshWeather()
 }
 
 class MainViewController: UIViewController {
@@ -59,5 +60,9 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         delegate?.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func refreshButtonPressed(_ sender: Any) {
+        delegate?.refreshWeather()
     }
 }

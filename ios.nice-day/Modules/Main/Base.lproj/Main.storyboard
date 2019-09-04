@@ -34,6 +34,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RW2-ru-ZT3">
                                                         <rect key="frame" x="336" y="0.0" width="62" height="30"/>
                                                         <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="refreshButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Seq-Lc-XWe"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>

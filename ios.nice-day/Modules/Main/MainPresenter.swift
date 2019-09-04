@@ -17,6 +17,13 @@ class MainPresenter {
 extension MainPresenter: MainViewControllerDelegate {
     //MARK: - MainViewControllerDelegate
     func viewDidLoad() {
+        //Populate UI
+        
+        refreshWeather()
+    }
+    
+    func refreshWeather() {
+        viewController?.HeaderLabel.text = "Analysing weather..."
         interactor?.qualifyWeatherAtCurrentLocation()
     }
 }
