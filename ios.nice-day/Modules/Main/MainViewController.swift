@@ -11,6 +11,7 @@ import UIKit
 protocol MainViewControllerDelegate {
     func viewDidLoad()
     func refreshWeather()
+    func changedPreference(characteristic: WeatherCharacteristic, newValue: Float)
 }
 
 class MainViewController: UIViewController {
@@ -64,5 +65,33 @@ class MainViewController: UIViewController {
     
     @IBAction func refreshButtonPressed(_ sender: Any) {
         delegate?.refreshWeather()
+    }
+    
+    @IBAction func preferenceChanged(_ sender: Any) {
+        guard let sender = sender as? UISlider else { return }
+        
+        let characteristic: WeatherCharacteristic
+        switch sender.tag {
+        case 0:
+            characteristic = .temperature
+            tempValueLabel.text = "\(Int(sender.value))°"
+        case 1:
+            characteristic = .humidity
+            humidityValueLabel.text = "\(Int(sender.value * 100))%"
+        case 2:
+            characteristic = .rainfall
+            rainfallValueLabel.text = "\(Int(sender.value)) mm"
+        case 3:
+            characteristic = .windSpeed
+            windSpeedValueLabel.text = "\(Int(sender.value)) m/s"
+        case 4:
+            characteristic = .cloudiness
+            cloudinessValueLabel.text = "\(Int(sender.value * 100))%"
+        default:
+            print("Unknown characteristic changed")
+            return
+        }
+        
+        delegate?.changedPreference(characteristic: characteristic, newValue: sender.value)
     }
 }

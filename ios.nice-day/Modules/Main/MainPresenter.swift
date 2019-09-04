@@ -26,6 +26,10 @@ extension MainPresenter: MainViewControllerDelegate {
         viewController?.HeaderLabel.text = "Analysing weather..."
         interactor?.qualifyWeatherAtCurrentLocation()
     }
+    
+    func changedPreference(characteristic: WeatherCharacteristic, newValue: Float) {
+        
+    }
 }
 
 extension MainPresenter: MainInteractorDelegate {
