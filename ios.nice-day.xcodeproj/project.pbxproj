@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AC49059D231FB95D00A82D71 /* WeatherCharacteristic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC49059C231FB95D00A82D71 /* WeatherCharacteristic.swift */; };
 		AC49059F231FC39100A82D71 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC49059E231FC39100A82D71 /* Preferences.swift */; };
+		AC4905A1231FD96000A82D71 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4905A0231FD96000A82D71 /* GradientView.swift */; };
+		AC4905A4231FDAC700A82D71 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC4905A3231FDAC700A82D71 /* Colors.xcassets */; };
 		AC942FC9231E4FC900737528 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FC8231E4FC900737528 /* AppDelegate.swift */; };
 		AC942FCE231E4FC900737528 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC942FCC231E4FC900737528 /* Main.storyboard */; };
 		AC942FD0231E4FCA00737528 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC942FCF231E4FCA00737528 /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 		1CC59E5A893343FFC7405D3F /* Pods-ios.nice-day.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.nice-day.debug.xcconfig"; path = "Target Support Files/Pods-ios.nice-day/Pods-ios.nice-day.debug.xcconfig"; sourceTree = "<group>"; };
 		AC49059C231FB95D00A82D71 /* WeatherCharacteristic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCharacteristic.swift; sourceTree = "<group>"; };
 		AC49059E231FC39100A82D71 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		AC4905A0231FD96000A82D71 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		AC4905A3231FDAC700A82D71 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		AC942FC5231E4FC900737528 /* ios.nice-day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios.nice-day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC942FC8231E4FC900737528 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC942FCD231E4FC900737528 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,6 +89,14 @@
 				18C973405073A4E6F44F8AD3 /* Pods_ios_nice_day.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC4905A2231FD96F00A82D71 /* Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				AC4905A0231FD96000A82D71 /* GradientView.swift */,
+			);
+			path = Subclasses;
 			sourceTree = "<group>";
 		};
 		AC942FBC231E4FC900737528 = {
@@ -161,8 +173,10 @@
 			children = (
 				AC943002231E60BB00737528 /* Structs + enums */,
 				AC942FFF231E5A8400737528 /* Extensions */,
+				AC4905A2231FD96F00A82D71 /* Subclasses */,
 				AC942FD1231E4FCA00737528 /* LaunchScreen.storyboard */,
 				AC942FCF231E4FCA00737528 /* Assets.xcassets */,
+				AC4905A3231FDAC700A82D71 /* Colors.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -279,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC942FD3231E4FCA00737528 /* LaunchScreen.storyboard in Resources */,
+				AC4905A4231FDAC700A82D71 /* Colors.xcassets in Resources */,
 				AC942FD0231E4FCA00737528 /* Assets.xcassets in Resources */,
 				AC942FCE231E4FC900737528 /* Main.storyboard in Resources */,
 			);
@@ -342,6 +357,7 @@
 			files = (
 				AC943001231E60B500737528 /* Weather.swift in Sources */,
 				AC943004231E8D3300737528 /* PreferenceType.swift in Sources */,
+				AC4905A1231FD96000A82D71 /* GradientView.swift in Sources */,
 				AC942FC9231E4FC900737528 /* AppDelegate.swift in Sources */,
 				AC942FF7231E521C00737528 /* MainRouter.swift in Sources */,
 				AC942FFC231E570A00737528 /* OpenWeatherService.swift in Sources */,
