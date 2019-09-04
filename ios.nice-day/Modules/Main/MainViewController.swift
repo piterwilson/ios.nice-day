@@ -58,6 +58,10 @@ class MainViewController: UIViewController {
     var delegate: MainViewControllerDelegate?
     private var tempRangeSlider: RangeSlider?
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    } 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         layoutView()
