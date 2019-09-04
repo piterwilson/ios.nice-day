@@ -23,7 +23,21 @@ extension MainPresenter: MainViewControllerDelegate {
     
     func refreshWeather() {
         viewController?.populateUI(headerText: "Analysing weather...", weather: nil, preferences: nil)
-        interactor?.qualifyWeatherAtCurrentLocation()
+        do {
+            try interactor?.qualifyWeatherAtCurrentLocation()
+        } catch let error as MainInteractorError {
+            switch error {
+            case .NoInternetConnection:
+                router?.presentAlert(message: "You seem to have no connection to the internet.",
+                                     viewController: viewController)
+            case .NoPermissionForLocationData:
+                router?.presentAlert(message: "We do not have permission to use your location data. Without it we can not fetch the weather at your current location.",
+                                     viewController: viewController)
+            }
+        } catch let error {
+            router?.presentAlert(message: error.localizedDescription, viewController: viewController)
+        }
+        
     }
     
     func changedPreference(characteristic: WeatherCharacteristic, newValue: Float) {
@@ -53,4 +67,9 @@ extension MainPresenter: MainInteractorDelegate {
         viewController?.populateUI(headerText: headerText, weather: weather, preferences: nil)
     }
 
+    func encountered(error: Error) {
+        router?.presentAlert(message: error.localizedDescription,
+                     viewController: viewController)
+    }
+    
 }

@@ -28,4 +28,12 @@ class MainRouter {
     static var mainstoryboard: UIStoryboard{
         return UIStoryboard(name:"Main",bundle: Bundle.main)
     }
+    
+    func presentAlert(message: String, viewController: UIViewController?) {
+        let alert = UIAlertController(title: "Something went wrong...",
+                                      message: message,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        viewController?.present(alert, animated: true, completion:nil)
+    }
 }

@@ -13,6 +13,12 @@ import Network
 
 protocol MainInteractorDelegate {
     func qualified(weather: Weather, score: Int)
+    func encountered(error: Error)
+}
+
+enum MainInteractorError: Error {
+    case NoInternetConnection
+    case NoPermissionForLocationData
 }
 
 class MainInteractor: NSObject {
@@ -64,16 +70,16 @@ class MainInteractor: NSObject {
         if let weather = currentWeather {
             qualify(weather: weather)
         } else {
-            qualifyWeatherAtCurrentLocation()
+            try? qualifyWeatherAtCurrentLocation()
         }
     }
     
     //MARK: - Qualifying weather
     
-    func qualifyWeatherAtCurrentLocation() {
+    func qualifyWeatherAtCurrentLocation() throws {
         guard let connectivityStatus = monitor?.currentPath.status, connectivityStatus == .satisfied else {
             //TODO: Tell the user there is no connection to the internet
-            return
+            throw MainInteractorError.NoInternetConnection
         }
         
         locationManager = CLLocationManager()
@@ -82,6 +88,8 @@ class MainInteractor: NSObject {
             locationManager?.delegate = self
             locationManager?.desiredAccuracy = kCLLocationAccuracyHundredMeters
             locationManager?.requestLocation()
+        } else {
+            throw MainInteractorError.NoPermissionForLocationData
         }
         openWeatherService = OpenWeatherService()
     }
@@ -102,7 +110,7 @@ class MainInteractor: NSObject {
             weatherRating -= determinePenalty(weatherCharacteristic: cloudiness, preference: preferences.cloudiness, preferenceType: .maxValue)
         }
         
-        presenter?.qualified(weather: weather, score: weatherRating)        
+        presenter?.qualified(weather: weather, score: weatherRating)
     }
     
     //Penalties are determined by how much the parameter deviates from the preferred parameter and is capped off on a maximum of 2
@@ -143,7 +151,9 @@ extension MainInteractor: CLLocationManagerDelegate {
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
         openWeatherService?.weatherForCoordinates(latitude: Float(locValue.latitude), longitude: Float(locValue.longitude)) { (response, error) in
             guard let weather = response else {
-                print("\(error?.localizedDescription)")
+                if let error = error {
+                    self.presenter?.encountered(error: error)
+                }
                 return
             }
             self.currentWeather = weather
@@ -152,7 +162,7 @@ extension MainInteractor: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("Failed to find user's location: \(error.localizedDescription)")
+        presenter?.encountered(error: error)
     }
     
 }
