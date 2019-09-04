@@ -9,7 +9,8 @@
 import Foundation
 
 struct Preferences {
-    let temperature: Float
+    let lowerTemperature: Float
+    let upperTemperature: Float
     let humidity: Float
     let rainfall: Float
     let windSpeed: Float

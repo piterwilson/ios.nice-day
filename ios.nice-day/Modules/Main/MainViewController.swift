@@ -79,6 +79,8 @@ class MainViewController: UIViewController {
         tempRangeSliderContainerView.addSubview(rangeSlider)
         rangeSlider.frame = tempRangeSliderContainerView.frame
         rangeSlider.center = tempRangeSliderContainerView.center
+        rangeSlider.addTarget(self, action: #selector(preferenceChanged(_:)),
+                              for: .valueChanged)
         tempRangeSlider = rangeSlider
     }
     
@@ -104,8 +106,9 @@ class MainViewController: UIViewController {
         }
         
         if let preferences = preferences {
-//            tempSlider.value = preferences.temperature
-            tempValueLabel.text = "\(Int(preferences.temperature))°"
+            tempRangeSlider?.lowerValue = CGFloat(preferences.lowerTemperature / 40)
+            tempRangeSlider?.upperValue = CGFloat(preferences.upperTemperature / 40)
+            tempValueLabel.text = "\(Int(preferences.lowerTemperature)) - \(Int(preferences.upperTemperature))°"
             
             humiditySlider.value = preferences.humidity
             humidityValueLabel.text = "\(Int(preferences.humidity * 100))%"
@@ -126,30 +129,33 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func preferenceChanged(_ sender: Any) {
-        guard let sender = sender as? UISlider else { return }
-        
-        let characteristic: WeatherCharacteristic
-        switch sender.tag {
-        case 0:
-            characteristic = .temperature
-            tempValueLabel.text = "\(Int(sender.value))°"
-        case 1:
-            characteristic = .humidity
-            humidityValueLabel.text = "\(Int(sender.value * 100))%"
-        case 2:
-            characteristic = .rainfall
-            rainfallValueLabel.text = "\(Int(sender.value)) mm"
-        case 3:
-            characteristic = .windSpeed
-            windSpeedValueLabel.text = "\(Int(sender.value)) m/s"
-        case 4:
-            characteristic = .cloudiness
-            cloudinessValueLabel.text = "\(Int(sender.value * 100))%"
-        default:
-            print("Unknown characteristic changed")
-            return
+        if let sender = sender as? UISlider {
+            
+            let characteristic: WeatherCharacteristic
+            switch sender.tag {
+            case 1:
+                characteristic = .humidity
+                humidityValueLabel.text = "\(Int(sender.value * 100))%"
+            case 2:
+                characteristic = .rainfall
+                rainfallValueLabel.text = "\(Int(sender.value)) mm"
+            case 3:
+                characteristic = .windSpeed
+                windSpeedValueLabel.text = "\(Int(sender.value)) m/s"
+            case 4:
+                characteristic = .cloudiness
+                cloudinessValueLabel.text = "\(Int(sender.value * 100))%"
+            default:
+                print("Unknown characteristic changed")
+                return
+            }
+            delegate?.changedPreference(characteristic: characteristic, newValue: sender.value)
+            
+        } else if let sender = sender as? RangeSlider {
+            tempValueLabel.text = "\(Int(sender.lowerValue * 40)) - \(Int(sender.upperValue * 40))°"
+            delegate?.changedPreference(characteristic: .lowerTemperature, newValue: Float(sender.lowerValue * 40))
+            delegate?.changedPreference(characteristic: .upperTemperature, newValue: Float(sender.upperValue * 40))
         }
-        
-        delegate?.changedPreference(characteristic: characteristic, newValue: sender.value)
     }
 }
+

@@ -9,7 +9,8 @@
 import Foundation
 
 enum WeatherCharacteristic: String, CaseIterable {
-    case temperature = "temperature"
+    case lowerTemperature = "lowerTemperature"
+    case upperTemperature = "upperTemperature"
     case humidity = "humidity"
     case rainfall = "rainfall"
     case windSpeed = "windSpeed"

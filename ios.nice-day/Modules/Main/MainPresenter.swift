@@ -14,7 +14,7 @@ class MainPresenter {
     var router: MainRouter?
 }
 
-extension MainPresenter: MainViewControllerDelegate {
+extension MainPresenter: MainViewControllerDelegate {    
     //MARK: - MainViewControllerDelegate
     func viewDidLoad() {
         viewController?.populateUI(headerText: nil, weather: nil, preferences: interactor?.loadPreferences())

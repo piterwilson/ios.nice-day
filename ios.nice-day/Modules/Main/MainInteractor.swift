@@ -35,7 +35,8 @@ class MainInteractor: NSObject {
     
     //MARK: - Preferences
     private func registerDefaultPreferences() {
-        let defaults: [String : Float] = [WeatherCharacteristic.temperature.rawValue : 18,
+        let defaults: [String : Float] = [WeatherCharacteristic.lowerTemperature.rawValue : 18,
+                                          WeatherCharacteristic.upperTemperature.rawValue : 27,
                                           WeatherCharacteristic.humidity.rawValue : 0.8,
                                           WeatherCharacteristic.rainfall.rawValue : 0,
                                           WeatherCharacteristic.windSpeed.rawValue : 3,
@@ -46,7 +47,8 @@ class MainInteractor: NSObject {
     
     
     func loadPreferences() -> Preferences {
-        return Preferences(temperature: UserDefaults.standard.float(forKey: WeatherCharacteristic.temperature.rawValue),
+        return Preferences(lowerTemperature: UserDefaults.standard.float(forKey: WeatherCharacteristic.lowerTemperature.rawValue),
+                           upperTemperature: UserDefaults.standard.float(forKey: WeatherCharacteristic.upperTemperature.rawValue),
                            humidity: UserDefaults.standard.float(forKey: WeatherCharacteristic.humidity.rawValue),
                            rainfall: UserDefaults.standard.float(forKey: WeatherCharacteristic.rainfall.rawValue),
                            windSpeed: UserDefaults.standard.float(forKey: WeatherCharacteristic.windSpeed.rawValue),
@@ -81,8 +83,8 @@ class MainInteractor: NSObject {
         let preferences = loadPreferences()
         var weatherRating = 10
         
-//        weatherRating -= determinePenalty(weatherCharacteristic: weather.temp, preference: preferredMinTemp, preferenceType: .minValue)
-        weatherRating -= determinePenalty(weatherCharacteristic: weather.temp, preference: preferences.temperature, preferenceType: .maxValue)
+        weatherRating -= determinePenalty(weatherCharacteristic: weather.temp, preference: preferences.lowerTemperature, preferenceType: .minValue)
+        weatherRating -= determinePenalty(weatherCharacteristic: weather.temp, preference: preferences.upperTemperature, preferenceType: .maxValue)
         weatherRating -= determinePenalty(weatherCharacteristic: weather.humidity, preference: preferences.humidity, preferenceType: .maxValue)
         if let rain = weather.rain {
             weatherRating -= determinePenalty(weatherCharacteristic: rain, preference: preferences.rainfall, preferenceType: .maxValue)
