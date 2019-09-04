@@ -18,7 +18,7 @@ extension MainPresenter: MainViewControllerDelegate {
     //MARK: - MainViewControllerDelegate
     func viewDidLoad() {
         //Populate UI
-        
+        interactor?.loadPreferences()
         refreshWeather()
     }
     
@@ -28,7 +28,7 @@ extension MainPresenter: MainViewControllerDelegate {
     }
     
     func changedPreference(characteristic: WeatherCharacteristic, newValue: Float) {
-        
+        interactor?.savePreference(characteristic: characteristic, newValue: newValue)
     }
 }
 
@@ -55,7 +55,7 @@ extension MainPresenter: MainInteractorDelegate {
             viewController?.HeaderLabel.text = "The weather is not that great... Could be worse, though!"
         case 6..<8:
             viewController?.HeaderLabel.text = "The weather is alright. Not perfect, but definitely fine."
-        case 9:
+        case 8..<10:
             viewController?.HeaderLabel.text = "The weather is pretty great!"
         case 10:
             viewController?.HeaderLabel.text = "The weather is couldn't be better! Enjoy today!"

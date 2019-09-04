@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC49059D231FB95D00A82D71 /* WeatherCharacteristic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC49059C231FB95D00A82D71 /* WeatherCharacteristic.swift */; };
+		AC49059F231FC39100A82D71 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC49059E231FC39100A82D71 /* Preferences.swift */; };
 		AC942FC9231E4FC900737528 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FC8231E4FC900737528 /* AppDelegate.swift */; };
 		AC942FCE231E4FC900737528 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC942FCC231E4FC900737528 /* Main.storyboard */; };
 		AC942FD0231E4FCA00737528 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC942FCF231E4FCA00737528 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		18C973405073A4E6F44F8AD3 /* Pods_ios_nice_day.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_nice_day.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CC59E5A893343FFC7405D3F /* Pods-ios.nice-day.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.nice-day.debug.xcconfig"; path = "Target Support Files/Pods-ios.nice-day/Pods-ios.nice-day.debug.xcconfig"; sourceTree = "<group>"; };
 		AC49059C231FB95D00A82D71 /* WeatherCharacteristic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCharacteristic.swift; sourceTree = "<group>"; };
+		AC49059E231FC39100A82D71 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		AC942FC5231E4FC900737528 /* ios.nice-day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios.nice-day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC942FC8231E4FC900737528 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC942FCD231E4FC900737528 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				AC943000231E60B500737528 /* Weather.swift */,
+				AC49059E231FC39100A82D71 /* Preferences.swift */,
 				AC943003231E8D3300737528 /* PreferenceType.swift */,
 				AC49059C231FB95D00A82D71 /* WeatherCharacteristic.swift */,
 			);
@@ -344,6 +347,7 @@
 				AC942FFC231E570A00737528 /* OpenWeatherService.swift in Sources */,
 				AC942FF5231E521C00737528 /* MainPresenter.swift in Sources */,
 				AC942FF6231E521C00737528 /* MainInteractor.swift in Sources */,
+				AC49059F231FC39100A82D71 /* Preferences.swift in Sources */,
 				AC942FFE231E5A7C00737528 /* URL+Extension.swift in Sources */,
 				AC942FF8231E521C00737528 /* MainViewController.swift in Sources */,
 				AC49059D231FB95D00A82D71 /* WeatherCharacteristic.swift in Sources */,

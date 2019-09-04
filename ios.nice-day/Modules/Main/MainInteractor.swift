@@ -24,6 +24,7 @@ class MainInteractor: NSObject {
     override init() {
         super.init()
         startMonitoringInternetConnection()
+        registerDefaultPreferences()
     }
     
     private func startMonitoringInternetConnection() {
@@ -32,12 +33,40 @@ class MainInteractor: NSObject {
         monitor?.start(queue: queue)
     }
     
+    //MARK: - Preferences
+    
+    private func registerDefaultPreferences() {
+        let defaults: [String : Float] = [WeatherCharacteristic.temperature.rawValue : 18,
+                                          WeatherCharacteristic.humidity.rawValue : 0.8,
+                                          WeatherCharacteristic.rainfall.rawValue : 0,
+                                          WeatherCharacteristic.windSpeed.rawValue : 3,
+                                          WeatherCharacteristic.cloudiness.rawValue : 0]
+        
+        UserDefaults.standard.register(defaults: defaults)
+    }
+    
+    
+    func loadPreferences() -> Preferences {
+        return Preferences(temperature: UserDefaults.standard.float(forKey: WeatherCharacteristic.temperature.rawValue),
+                           humidity: UserDefaults.standard.float(forKey: WeatherCharacteristic.humidity.rawValue),
+                           rainfall: UserDefaults.standard.float(forKey: WeatherCharacteristic.rainfall.rawValue),
+                           windSpeed: UserDefaults.standard.float(forKey: WeatherCharacteristic.windSpeed.rawValue),
+                           cloudiness: UserDefaults.standard.float(forKey: WeatherCharacteristic.cloudiness.rawValue))
+    }
+    
+    func savePreference(characteristic: WeatherCharacteristic, newValue: Float) {
+        let userDefaultsKey: String = characteristic.rawValue
+        UserDefaults.standard.set(newValue, forKey: userDefaultsKey)
+    }
+    
+    //MARK: - Qualifying weather
+    
     func qualifyWeatherAtCurrentLocation() {
         guard let connectivityStatus = monitor?.currentPath.status, connectivityStatus == .satisfied else {
             //TODO: Tell the user there is no connection to the internet
             return
         }
-
+        
         locationManager = CLLocationManager()
         locationManager?.requestWhenInUseAuthorization()
         if CLLocationManager.locationServicesEnabled() {
@@ -48,26 +77,20 @@ class MainInteractor: NSObject {
         openWeatherService = OpenWeatherService()
     }
     
-    //Temporary hardcoded preference
-    let preferredMinTemp: Double = 18
-    let preferredMaxTemp: Double = 27
-    let preferredMaxHumidity: Double = 0.8
-    let preferredMaxRainfall: Double = 0
-    let preferredMaxWindSpeed: Double = 8
-    let preferredMaxCloudiness: Double = 0.2
     
     private func qualify(weather: Weather) {
+        let preferences = loadPreferences()
         var weatherRating = 10
         
-        weatherRating -= determinePenalty(weatherCharacteristic: weather.temp, preference: preferredMinTemp, preferenceType: .minValue)
-        weatherRating -= determinePenalty(weatherCharacteristic: weather.temp, preference: preferredMaxTemp, preferenceType: .maxValue)
-        weatherRating -= determinePenalty(weatherCharacteristic: weather.humidity, preference: preferredMaxHumidity, preferenceType: .maxValue)
+//        weatherRating -= determinePenalty(weatherCharacteristic: weather.temp, preference: preferredMinTemp, preferenceType: .minValue)
+        weatherRating -= determinePenalty(weatherCharacteristic: weather.temp, preference: preferences.temperature, preferenceType: .maxValue)
+        weatherRating -= determinePenalty(weatherCharacteristic: weather.humidity, preference: preferences.humidity, preferenceType: .maxValue)
         if let rain = weather.rain {
-            weatherRating -= determinePenalty(weatherCharacteristic: rain, preference: preferredMaxRainfall, preferenceType: .maxValue)
+            weatherRating -= determinePenalty(weatherCharacteristic: rain, preference: preferences.rainfall, preferenceType: .maxValue)
         }
-        weatherRating -= determinePenalty(weatherCharacteristic: weather.wind.speed, preference: preferredMaxWindSpeed, preferenceType: .maxValue)
+        weatherRating -= determinePenalty(weatherCharacteristic: weather.wind.speed, preference: preferences.windSpeed, preferenceType: .maxValue)
         if let cloudiness = weather.cloudiness {
-            weatherRating -= determinePenalty(weatherCharacteristic: cloudiness, preference: preferredMaxCloudiness, preferenceType: .maxValue)
+            weatherRating -= determinePenalty(weatherCharacteristic: cloudiness, preference: preferences.cloudiness, preferenceType: .maxValue)
         }
         
         print("weatherRating: \(weatherRating)")
@@ -75,7 +98,7 @@ class MainInteractor: NSObject {
     }
     
     //Penalties are determined by how much the parameter deviates from the preferred parameter and is capped off on a maximum of 2
-    private func determinePenalty(weatherCharacteristic: Double, preference: Double, preferenceType: PreferenceType) -> Int {
+    private func determinePenalty(weatherCharacteristic: Float, preference: Float, preferenceType: PreferenceType) -> Int {
         let penalty: Int
         switch preferenceType {
         case .minValue:
@@ -83,7 +106,7 @@ class MainInteractor: NSObject {
                 if preference == 0 {
                     penalty = floor(weatherCharacteristic / 10) < 2 ? Int(weatherCharacteristic / 10) : 2
                 } else {
-                    let deviation : Double = (preference - weatherCharacteristic) / preference
+                    let deviation : Float = (preference - weatherCharacteristic) / preference
                     penalty = floor(deviation * 10) < 2 ? Int(floor(deviation * 10)) : 2
                 }
             } else {
@@ -94,7 +117,7 @@ class MainInteractor: NSObject {
                 if preference == 0 {
                     penalty = floor(weatherCharacteristic / 10) < 2 ? Int(weatherCharacteristic / 10) : 2
                 } else {
-                    let deviation : Double = Double((weatherCharacteristic - preference) / preference)
+                    let deviation : Float = Float((weatherCharacteristic - preference) / preference)
                     penalty = floor(deviation * 10) < 2 ? Int(floor(deviation * 10)) : 2
                 }
             } else {
@@ -112,7 +135,7 @@ extension MainInteractor: CLLocationManagerDelegate {
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
         openWeatherService?.weatherForCoordinates(latitude: Float(locValue.latitude), longitude: Float(locValue.longitude)) { (response, error) in
             guard let weather = response else {
-                print("\(error)")
+                print("\(error?.localizedDescription)")
                 return
             }
             //            print("\(response)")

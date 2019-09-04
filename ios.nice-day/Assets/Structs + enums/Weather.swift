@@ -10,29 +10,29 @@ import Foundation
 import SwiftyJSON
 
 struct Weather {
-    let temp: Double // Kelvin
-    let humidity: Double // Percentage humidity
-    let rain: Double? // Rain volume for the last 1 hour, mm -> Optional, because OpenWeather does not provide parameters for weather phenomena that are not happening
+    let temp: Float // Kelvin
+    let humidity: Float // Percentage humidity
+    let rain: Float? // Rain volume for the last 1 hour, mm -> Optional, because OpenWeather does not provide parameters for weather phenomena that are not happening
     let wind: Wind
-    let cloudiness: Double? // Percentage cloudiness
+    let cloudiness: Float? // Percentage cloudiness
     
     struct Wind {
-        let direction: Double // Degrees (meteorological)
-        let speed: Double // m/s
+        let direction: Float // Degrees (meteorological)
+        let speed: Float // m/s
     }
     
     init?(data: Any) {
         let json = JSON(data)
         guard
-            let parsedTemp = json["main"]["temp"].double,
-            let parsedHumidity = json["main"]["humidity"].double,
-            let parsedWindDirection = json["wind"]["deg"].double,
-            let parsedWindSpeed = json["wind"]["speed"].double,
-            let parsedClouds = json["clouds"]["all"].double else { return nil }
+            let parsedTemp = json["main"]["temp"].float,
+            let parsedHumidity = json["main"]["humidity"].float,
+            let parsedWindDirection = json["wind"]["deg"].float,
+            let parsedWindSpeed = json["wind"]["speed"].float,
+            let parsedClouds = json["clouds"]["all"].float else { return nil }
         
         temp = parsedTemp
         humidity = parsedHumidity/100
-        rain = json["rain"]["rain.1h"].double
+        rain = json["rain"]["rain.1h"].float
         wind = Wind(direction: parsedWindDirection, speed: parsedWindSpeed)
         cloudiness = parsedClouds/100
     }
