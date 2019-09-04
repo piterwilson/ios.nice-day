@@ -34,7 +34,6 @@ class MainInteractor: NSObject {
     }
     
     //MARK: - Preferences
-    
     private func registerDefaultPreferences() {
         let defaults: [String : Float] = [WeatherCharacteristic.temperature.rawValue : 18,
                                           WeatherCharacteristic.humidity.rawValue : 0.8,

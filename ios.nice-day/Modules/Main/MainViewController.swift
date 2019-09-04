@@ -15,7 +15,7 @@ protocol MainViewControllerDelegate {
 }
 
 class MainViewController: UIViewController {
-    @IBOutlet weak var HeaderLabel: UILabel!
+    @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var refreshButton: UIButton!
     
     @IBOutlet weak var currentTempImageView: UIImageView!
@@ -60,7 +60,45 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate?.viewDidLoad()
-        // Do any additional setup after loading the view.
+    }
+    
+    func populateUI(headerText: String?, weather: Weather?, preferences: Preferences?) {
+        if let headerText = headerText {
+            headerLabel.text = headerText
+        }
+        
+        if let weather = weather {
+            currentTempLabel.text = "\(floor(weather.temp))°"
+            currentHumidityLabel.text = "\(Int(weather.humidity * 100))%"
+            if let rainfall = weather.rain {
+                currentRainfallLabel.text = "\(Int(rainfall)) mm"
+            } else {
+                currentRainfallLabel.text = "--"
+            }
+            currentWindSpeedLabel.text = "\(Int(weather.wind.speed)) m/s"
+            if let cloudiness = weather.cloudiness {
+                currentCloudinessLabel.text = "\(Int(cloudiness * 100))%"
+            } else {
+                currentCloudinessLabel.text = "--"
+            }
+        }
+        
+        if let preferences = preferences {
+            tempSlider.value = preferences.temperature
+            tempValueLabel.text = "\(Int(preferences.temperature))°"
+            
+            humiditySlider.value = preferences.humidity
+            humidityValueLabel.text = "\(Int(preferences.humidity * 100))%"
+
+            rainfallSlider.value = preferences.rainfall
+            rainfallValueLabel.text = "\(Int(preferences.rainfall)) mm"
+            
+            windSpeedSlider.value = preferences.windSpeed
+            windSpeedValueLabel.text = "\(Int(preferences.windSpeed)) m/s"
+            
+            cloudinessSlider.value = preferences.cloudiness
+            cloudinessValueLabel.text = "\(Int(preferences.cloudiness * 100))%"
+        }
     }
     
     @IBAction func refreshButtonPressed(_ sender: Any) {
