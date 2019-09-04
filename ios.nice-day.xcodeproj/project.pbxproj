@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AC0608C7231FF35D00B8F9F5 /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0608C6231FF35D00B8F9F5 /* RangeSlider.swift */; };
 		AC0608C9231FF43E00B8F9F5 /* RangeSliderTrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0608C8231FF43E00B8F9F5 /* RangeSliderTrackLayer.swift */; };
+		AC0608CB23200AAD00B8F9F5 /* AnimatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0608CA23200AAD00B8F9F5 /* AnimatedButton.swift */; };
 		AC49059D231FB95D00A82D71 /* WeatherCharacteristic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC49059C231FB95D00A82D71 /* WeatherCharacteristic.swift */; };
 		AC49059F231FC39100A82D71 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC49059E231FC39100A82D71 /* Preferences.swift */; };
 		AC4905A1231FD96000A82D71 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4905A0231FD96000A82D71 /* GradientView.swift */; };
@@ -45,6 +46,7 @@
 		1CC59E5A893343FFC7405D3F /* Pods-ios.nice-day.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.nice-day.debug.xcconfig"; path = "Target Support Files/Pods-ios.nice-day/Pods-ios.nice-day.debug.xcconfig"; sourceTree = "<group>"; };
 		AC0608C6231FF35D00B8F9F5 /* RangeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSlider.swift; sourceTree = "<group>"; };
 		AC0608C8231FF43E00B8F9F5 /* RangeSliderTrackLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSliderTrackLayer.swift; sourceTree = "<group>"; };
+		AC0608CA23200AAD00B8F9F5 /* AnimatedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedButton.swift; sourceTree = "<group>"; };
 		AC49059C231FB95D00A82D71 /* WeatherCharacteristic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCharacteristic.swift; sourceTree = "<group>"; };
 		AC49059E231FC39100A82D71 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		AC4905A0231FD96000A82D71 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				AC4905A0231FD96000A82D71 /* GradientView.swift */,
+				AC0608CA23200AAD00B8F9F5 /* AnimatedButton.swift */,
 			);
 			path = Subclasses;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				AC49059F231FC39100A82D71 /* Preferences.swift in Sources */,
 				AC942FFE231E5A7C00737528 /* URL+Extension.swift in Sources */,
 				AC942FF8231E521C00737528 /* MainViewController.swift in Sources */,
+				AC0608CB23200AAD00B8F9F5 /* AnimatedButton.swift in Sources */,
 				AC49059D231FB95D00A82D71 /* WeatherCharacteristic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

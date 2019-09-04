@@ -23,31 +23,39 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="boe-1i-1nT">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="880"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="898"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOe-hz-yfJ">
-                                                <rect key="frame" x="0.0" y="16" width="414" height="30"/>
+                                                <rect key="frame" x="0.0" y="16" width="414" height="48"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTr-rE-6ob">
-                                                        <rect key="frame" x="16" y="0.0" width="336" height="30"/>
+                                                        <rect key="frame" x="16" y="0.0" width="334" height="48"/>
                                                     </view>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RW2-ru-ZT3">
-                                                        <rect key="frame" x="352" y="0.0" width="46" height="30"/>
-                                                        <state key="normal" title="Button">
-                                                            <color key="titleColor" name="ndYellow"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RW2-ru-ZT3" customClass="AnimatedButton" customModule="ios_nice_day" customModuleProvider="target">
+                                                        <rect key="frame" x="350" y="0.0" width="48" height="48"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="RW2-ru-ZT3" secondAttribute="height" multiplier="1:1" id="MVe-ic-XRh"/>
+                                                        </constraints>
+                                                        <state key="normal" image="refresh">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                                <color key="value" name="ndYellow"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="refreshButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Seq-Lc-XWe"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="CGu-TE-Hen"/>
+                                                    <constraint firstAttribute="height" constant="48" id="CGu-TE-Hen"/>
                                                 </constraints>
                                                 <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="16" bottom="0.0" trailing="16"/>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V6k-8R-hQb">
-                                                <rect key="frame" x="0.0" y="50" width="414" height="256"/>
+                                                <rect key="frame" x="0.0" y="68" width="414" height="256"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAY-d7-dlP">
                                                         <rect key="frame" x="32" y="128" width="350" height="0.0"/>
@@ -64,7 +72,7 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="d7A-e5-pZk">
-                                                <rect key="frame" x="0.0" y="310" width="414" height="54"/>
+                                                <rect key="frame" x="0.0" y="328" width="414" height="54"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="AhR-ef-VIE">
                                                         <rect key="frame" x="16" y="0.0" width="50" height="54"/>
@@ -213,13 +221,13 @@
                                                 <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="16" bottom="0.0" trailing="16"/>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HCh-aK-REg">
-                                                <rect key="frame" x="0.0" y="368" width="414" height="24"/>
+                                                <rect key="frame" x="0.0" y="386" width="414" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="Boc-yN-voL"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DlS-5L-TZi">
-                                                <rect key="frame" x="0.0" y="396" width="414" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="414" width="414" height="20.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your preferences" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFz-PF-OvI">
                                                         <rect key="frame" x="8" y="0.0" width="398" height="20.5"/>
@@ -231,14 +239,14 @@
                                                 <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="8" bottom="0.0" trailing="8"/>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nr-bS-lh5">
-                                                <rect key="frame" x="0.0" y="420.5" width="414" height="2"/>
+                                                <rect key="frame" x="0.0" y="438.5" width="414" height="2"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="2" id="ONd-hq-dAC"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="BAj-AO-XG8">
-                                                <rect key="frame" x="0.0" y="426.5" width="414" height="437.5"/>
+                                                <rect key="frame" x="0.0" y="444.5" width="414" height="437.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bjO-uN-voC">
                                                         <rect key="frame" x="24" y="24" width="366" height="59.5"/>
@@ -473,6 +481,7 @@
         <image name="cloudiness" width="48.5" height="48"/>
         <image name="humidity" width="48.5" height="48"/>
         <image name="rainfall" width="48.5" height="48"/>
+        <image name="refresh" width="48.5" height="48"/>
         <image name="temperature" width="48" height="48"/>
         <image name="windspeed" width="48.5" height="48"/>
         <namedColor name="ndBlue">
