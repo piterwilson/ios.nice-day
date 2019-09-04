@@ -9,7 +9,6 @@
 import UIKit
 
 @IBDesignable class GradientView: UIView {
-    
     @IBInspectable var startColor:   UIColor = .black {didSet { updateColors() }}
     @IBInspectable var endColor:     UIColor = .white { didSet { updateColors() }}
     @IBInspectable var startLocation: Double =   0 { didSet { updateLocations() }}

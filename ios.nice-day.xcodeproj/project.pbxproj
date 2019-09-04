@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC0608C7231FF35D00B8F9F5 /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0608C6231FF35D00B8F9F5 /* RangeSlider.swift */; };
+		AC0608C9231FF43E00B8F9F5 /* RangeSliderTrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0608C8231FF43E00B8F9F5 /* RangeSliderTrackLayer.swift */; };
 		AC49059D231FB95D00A82D71 /* WeatherCharacteristic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC49059C231FB95D00A82D71 /* WeatherCharacteristic.swift */; };
 		AC49059F231FC39100A82D71 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC49059E231FC39100A82D71 /* Preferences.swift */; };
 		AC4905A1231FD96000A82D71 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4905A0231FD96000A82D71 /* GradientView.swift */; };
@@ -41,6 +43,8 @@
 		0ED07BF7B0A08EC0EC6613B6 /* Pods-ios.nice-day.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.nice-day.release.xcconfig"; path = "Target Support Files/Pods-ios.nice-day/Pods-ios.nice-day.release.xcconfig"; sourceTree = "<group>"; };
 		18C973405073A4E6F44F8AD3 /* Pods_ios_nice_day.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_nice_day.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CC59E5A893343FFC7405D3F /* Pods-ios.nice-day.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.nice-day.debug.xcconfig"; path = "Target Support Files/Pods-ios.nice-day/Pods-ios.nice-day.debug.xcconfig"; sourceTree = "<group>"; };
+		AC0608C6231FF35D00B8F9F5 /* RangeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSlider.swift; sourceTree = "<group>"; };
+		AC0608C8231FF43E00B8F9F5 /* RangeSliderTrackLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSliderTrackLayer.swift; sourceTree = "<group>"; };
 		AC49059C231FB95D00A82D71 /* WeatherCharacteristic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCharacteristic.swift; sourceTree = "<group>"; };
 		AC49059E231FC39100A82D71 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		AC4905A0231FD96000A82D71 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -89,6 +93,15 @@
 				18C973405073A4E6F44F8AD3 /* Pods_ios_nice_day.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC0608C5231FF33B00B8F9F5 /* Custom controls */ = {
+			isa = PBXGroup;
+			children = (
+				AC0608C6231FF35D00B8F9F5 /* RangeSlider.swift */,
+				AC0608C8231FF43E00B8F9F5 /* RangeSliderTrackLayer.swift */,
+			);
+			path = "Custom controls";
 			sourceTree = "<group>";
 		};
 		AC4905A2231FD96F00A82D71 /* Subclasses */ = {
@@ -171,6 +184,7 @@
 		AC942FF0231E51F500737528 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				AC0608C5231FF33B00B8F9F5 /* Custom controls */,
 				AC943002231E60BB00737528 /* Structs + enums */,
 				AC942FFF231E5A8400737528 /* Extensions */,
 				AC4905A2231FD96F00A82D71 /* Subclasses */,
@@ -357,9 +371,11 @@
 			files = (
 				AC943001231E60B500737528 /* Weather.swift in Sources */,
 				AC943004231E8D3300737528 /* PreferenceType.swift in Sources */,
+				AC0608C9231FF43E00B8F9F5 /* RangeSliderTrackLayer.swift in Sources */,
 				AC4905A1231FD96000A82D71 /* GradientView.swift in Sources */,
 				AC942FC9231E4FC900737528 /* AppDelegate.swift in Sources */,
 				AC942FF7231E521C00737528 /* MainRouter.swift in Sources */,
+				AC0608C7231FF35D00B8F9F5 /* RangeSlider.swift in Sources */,
 				AC942FFC231E570A00737528 /* OpenWeatherService.swift in Sources */,
 				AC942FF5231E521C00737528 /* MainPresenter.swift in Sources */,
 				AC942FF6231E521C00737528 /* MainInteractor.swift in Sources */,

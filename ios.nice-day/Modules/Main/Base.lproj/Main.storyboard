@@ -23,16 +23,16 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="boe-1i-1nT">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="879"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="880"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOe-hz-yfJ">
                                                 <rect key="frame" x="0.0" y="16" width="414" height="30"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTr-rE-6ob">
-                                                        <rect key="frame" x="16" y="0.0" width="320" height="30"/>
+                                                        <rect key="frame" x="16" y="0.0" width="336" height="30"/>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RW2-ru-ZT3">
-                                                        <rect key="frame" x="336" y="0.0" width="62" height="30"/>
+                                                        <rect key="frame" x="352" y="0.0" width="46" height="30"/>
                                                         <state key="normal" title="Button">
                                                             <color key="titleColor" name="ndYellow"/>
                                                         </state>
@@ -238,10 +238,10 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="BAj-AO-XG8">
-                                                <rect key="frame" x="0.0" y="426.5" width="414" height="436.5"/>
+                                                <rect key="frame" x="0.0" y="426.5" width="414" height="437.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bjO-uN-voC">
-                                                        <rect key="frame" x="24" y="24" width="366" height="58.5"/>
+                                                        <rect key="frame" x="24" y="24" width="366" height="59.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kO7-5I-69t">
                                                                 <rect key="frame" x="0.0" y="0.0" width="366" height="20.5"/>
@@ -250,17 +250,17 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="xcv-He-84e">
-                                                                <rect key="frame" x="0.0" y="28.5" width="366" height="30"/>
+                                                                <rect key="frame" x="0.0" y="28.5" width="366" height="31"/>
                                                                 <subviews>
-                                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="Sfl-Nr-JH9">
-                                                                        <rect key="frame" x="-2" y="0.0" width="274" height="31"/>
-                                                                        <color key="tintColor" name="ndYellow"/>
-                                                                        <connections>
-                                                                            <action selector="preferenceChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="KLA-6s-t2h"/>
-                                                                        </connections>
-                                                                    </slider>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffh-br-K5I">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="270" height="31"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="31" id="kU1-0Q-KHk"/>
+                                                                        </constraints>
+                                                                    </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1P6-mJ-kop">
-                                                                        <rect key="frame" x="294" y="0.0" width="72" height="30"/>
+                                                                        <rect key="frame" x="294" y="0.0" width="72" height="31"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="72" id="SAV-q8-56B"/>
                                                                         </constraints>
@@ -273,7 +273,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VK9-Xn-fWk">
-                                                        <rect key="frame" x="24" y="106.5" width="366" height="58.5"/>
+                                                        <rect key="frame" x="24" y="107.5" width="366" height="58.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maximum humidity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHO-ey-rPX">
                                                                 <rect key="frame" x="0.0" y="0.0" width="366" height="20.5"/>
@@ -302,7 +302,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eMa-PU-gaw">
-                                                        <rect key="frame" x="24" y="189" width="366" height="58.5"/>
+                                                        <rect key="frame" x="24" y="190" width="366" height="58.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maximum rainfall" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PY3-JB-LCN">
                                                                 <rect key="frame" x="0.0" y="0.0" width="366" height="20.5"/>
@@ -331,7 +331,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qGy-S9-x5d">
-                                                        <rect key="frame" x="24" y="271.5" width="366" height="58.5"/>
+                                                        <rect key="frame" x="24" y="272.5" width="366" height="58.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maximum wind speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndR-ON-ibw">
                                                                 <rect key="frame" x="0.0" y="0.0" width="366" height="20.5"/>
@@ -360,7 +360,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aVY-Qg-FMt">
-                                                        <rect key="frame" x="24" y="354" width="366" height="58.5"/>
+                                                        <rect key="frame" x="24" y="355" width="366" height="58.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maximum cloudiness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="be0-iK-2M7">
                                                                 <rect key="frame" x="0.0" y="0.0" width="366" height="20.5"/>
@@ -458,7 +458,7 @@
                         <outlet property="rainfallValueLabel" destination="chU-tn-tjj" id="TMd-ah-SaA"/>
                         <outlet property="refreshButton" destination="RW2-ru-ZT3" id="8aK-Ht-05B"/>
                         <outlet property="tempHeaderLabel" destination="kO7-5I-69t" id="fUl-pq-FX0"/>
-                        <outlet property="tempSlider" destination="Sfl-Nr-JH9" id="il1-fN-yrk"/>
+                        <outlet property="tempRangeSliderContainerView" destination="ffh-br-K5I" id="5mh-J6-5KX"/>
                         <outlet property="tempValueLabel" destination="1P6-mJ-kop" id="8TY-BG-llx"/>
                         <outlet property="windSpeedHeaderLabel" destination="ndR-ON-ibw" id="e0T-2P-D0d"/>
                         <outlet property="windSpeedSlider" destination="TcJ-cl-Jsj" id="Lka-xF-2WZ"/>

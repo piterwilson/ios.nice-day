@@ -36,7 +36,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var preferencesHeaderLabel: UILabel!
     
     @IBOutlet weak var tempHeaderLabel: UILabel!
-    @IBOutlet weak var tempSlider: UISlider!
+    @IBOutlet weak var tempRangeSliderContainerView: UIView!
     @IBOutlet weak var tempValueLabel: UILabel!
     
     @IBOutlet weak var humidityHeaderLabel: UILabel!
@@ -56,10 +56,30 @@ class MainViewController: UIViewController {
     @IBOutlet weak var cloudinessValueLabel: UILabel!
     
     var delegate: MainViewControllerDelegate?
+    private var tempRangeSlider: RangeSlider?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        layoutView()
         delegate?.viewDidLoad()
+    }
+    
+    private func layoutView() {
+        configureRangeSlider()
+        
+        humiditySlider.maximumTrackTintColor = UIColor(white: 0.9, alpha: 1)
+        rainfallSlider.maximumTrackTintColor = UIColor(white: 0.9, alpha: 1)
+        windSpeedSlider.maximumTrackTintColor = UIColor(white: 0.9, alpha: 1)
+        cloudinessSlider.maximumTrackTintColor = UIColor(white: 0.9, alpha: 1)
+    }
+    
+    
+    private func configureRangeSlider() {
+        let rangeSlider = RangeSlider()
+        tempRangeSliderContainerView.addSubview(rangeSlider)
+        rangeSlider.frame = tempRangeSliderContainerView.frame
+        rangeSlider.center = tempRangeSliderContainerView.center
+        tempRangeSlider = rangeSlider
     }
     
     func populateUI(headerText: String?, weather: Weather?, preferences: Preferences?) {
@@ -84,7 +104,7 @@ class MainViewController: UIViewController {
         }
         
         if let preferences = preferences {
-            tempSlider.value = preferences.temperature
+//            tempSlider.value = preferences.temperature
             tempValueLabel.text = "\(Int(preferences.temperature))°"
             
             humiditySlider.value = preferences.humidity
