@@ -86,7 +86,12 @@ class MainViewController: UIViewController {
     
     func populateUI(headerText: String?, weather: Weather?, preferences: Preferences?) {
         if let headerText = headerText {
-            headerLabel.text = headerText
+            UIView.transition(with: headerLabel,
+                              duration: 0.25,
+                              options: .transitionCrossDissolve,
+                              animations: { [weak self] in
+                                self?.headerLabel.text = headerText
+                }, completion: nil)
         }
         
         if let weather = weather {
