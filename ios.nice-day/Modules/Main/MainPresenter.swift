@@ -51,7 +51,7 @@ extension MainPresenter: MainInteractorDelegate {
         switch score {
         case 1..<3:
             viewController?.HeaderLabel.text = "The weather is abysmal... Better stay inside!"
-        case 3..<5:
+        case 3..<6:
             viewController?.HeaderLabel.text = "The weather is not that great... Could be worse, though!"
         case 6..<8:
             viewController?.HeaderLabel.text = "The weather is alright. Not perfect, but definitely fine."
