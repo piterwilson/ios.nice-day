@@ -12,7 +12,7 @@ import CoreLocation
 import Network
 
 protocol MainInteractorDelegate {
-    
+    func qualified(weather: Weather, score: Int)
 }
 
 class MainInteractor: NSObject {
@@ -71,6 +71,7 @@ class MainInteractor: NSObject {
         }
         
         print("weatherRating: \(weatherRating)")
+        presenter?.qualified(weather: weather, score: weatherRating)        
     }
     
     //Penalties are determined by how much the parameter deviates from the preferred parameter and is capped off on a maximum of 2
