@@ -17,9 +17,11 @@ protocol MainInteractorDelegate {
 
 class MainInteractor: NSObject {
     var presenter: MainInteractorDelegate?
-    var openWeatherService: OpenWeatherService?
-    var locationManager: CLLocationManager?
-    var monitor: NWPathMonitor?
+    private var openWeatherService: OpenWeatherService?
+    private var locationManager: CLLocationManager?
+    private var monitor: NWPathMonitor?
+    
+    var currentWeather: Weather?
     
     override init() {
         super.init()
@@ -58,6 +60,12 @@ class MainInteractor: NSObject {
     func savePreference(characteristic: WeatherCharacteristic, newValue: Float) {
         let userDefaultsKey: String = characteristic.rawValue
         UserDefaults.standard.set(newValue, forKey: userDefaultsKey)
+        
+        if let weather = currentWeather {
+            qualify(weather: weather)
+        } else {
+            qualifyWeatherAtCurrentLocation()
+        }
     }
     
     //MARK: - Qualifying weather
@@ -94,7 +102,6 @@ class MainInteractor: NSObject {
             weatherRating -= determinePenalty(weatherCharacteristic: cloudiness, preference: preferences.cloudiness, preferenceType: .maxValue)
         }
         
-        print("weatherRating: \(weatherRating)")
         presenter?.qualified(weather: weather, score: weatherRating)        
     }
     
@@ -139,7 +146,7 @@ extension MainInteractor: CLLocationManagerDelegate {
                 print("\(error?.localizedDescription)")
                 return
             }
-            //            print("\(response)")
+            self.currentWeather = weather
             self.qualify(weather: weather)
         }
     }
