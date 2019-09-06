@@ -115,33 +115,20 @@ class MainInteractor: NSObject {
     
     //Penalties are determined by how much the parameter deviates from the preferred parameter and is capped off on a maximum of 2
     private func determinePenalty(weatherCharacteristic: Float, preference: Float, preferenceType: PreferenceType) -> Int {
+        guard preference != 0 else {
+            return floor(weatherCharacteristic / 10) < 2 ? Int(weatherCharacteristic / 10) : 2
+        }
+        
         let penalty: Int
         switch preferenceType {
         case .minValue:
-            if weatherCharacteristic < preference {
-                if preference == 0 {
-                    penalty = floor(weatherCharacteristic / 10) < 2 ? Int(weatherCharacteristic / 10) : 2
-                } else {
-                    let deviation : Float = (preference - weatherCharacteristic) / preference
-                    penalty = floor(deviation * 10) < 2 ? Int(floor(deviation * 10)) : 2
-                }
-            } else {
-                penalty = 0
-            }
+            penalty = weatherCharacteristic < preference ? Int((preference - weatherCharacteristic) / preference) : 0
         case .maxValue:
-            if weatherCharacteristic > preference {
-                if preference == 0 {
-                    penalty = floor(weatherCharacteristic / 10) < 2 ? Int(weatherCharacteristic / 10) : 2
-                } else {
-                    let deviation : Float = Float((weatherCharacteristic - preference) / preference)
-                    penalty = floor(deviation * 10) < 2 ? Int(floor(deviation * 10)) : 2
-                }
-            } else {
-                penalty = 0
-            }
+            penalty = weatherCharacteristic > preference ? Int((weatherCharacteristic - preference) / preference) : 0
         }
         
-        return penalty
+        let cappedPenalty = penalty <= 2 ? penalty : 2
+        return cappedPenalty
     }
 }
 
