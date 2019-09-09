@@ -1,0 +1,660 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC0608C7231FF35D00B8F9F5 /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0608C6231FF35D00B8F9F5 /* RangeSlider.swift */; };
+		AC0608C9231FF43E00B8F9F5 /* RangeSliderTrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0608C8231FF43E00B8F9F5 /* RangeSliderTrackLayer.swift */; };
+		AC0608CB23200AAD00B8F9F5 /* AnimatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0608CA23200AAD00B8F9F5 /* AnimatedButton.swift */; };
+		AC49059D231FB95D00A82D71 /* WeatherCharacteristic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC49059C231FB95D00A82D71 /* WeatherCharacteristic.swift */; };
+		AC49059F231FC39100A82D71 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC49059E231FC39100A82D71 /* Preferences.swift */; };
+		AC4905A1231FD96000A82D71 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4905A0231FD96000A82D71 /* GradientView.swift */; };
+		AC4905A4231FDAC700A82D71 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC4905A3231FDAC700A82D71 /* Colors.xcassets */; };
+		AC942FC9231E4FC900737528 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FC8231E4FC900737528 /* AppDelegate.swift */; };
+		AC942FCE231E4FC900737528 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC942FCC231E4FC900737528 /* Main.storyboard */; };
+		AC942FD0231E4FCA00737528 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC942FCF231E4FCA00737528 /* Assets.xcassets */; };
+		AC942FD3231E4FCA00737528 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC942FD1231E4FCA00737528 /* LaunchScreen.storyboard */; };
+		AC942FDE231E4FCA00737528 /* ios_nice_dayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FDD231E4FCA00737528 /* ios_nice_dayTests.swift */; };
+		AC942FF5231E521C00737528 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FF1231E521C00737528 /* MainPresenter.swift */; };
+		AC942FF6231E521C00737528 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FF2231E521C00737528 /* MainInteractor.swift */; };
+		AC942FF7231E521C00737528 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FF3231E521C00737528 /* MainRouter.swift */; };
+		AC942FF8231E521C00737528 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FF4231E521C00737528 /* MainViewController.swift */; };
+		AC942FFC231E570A00737528 /* OpenWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FFB231E570A00737528 /* OpenWeatherService.swift */; };
+		AC942FFE231E5A7C00737528 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC942FFD231E5A7C00737528 /* URL+Extension.swift */; };
+		AC943001231E60B500737528 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC943000231E60B500737528 /* Weather.swift */; };
+		AC943004231E8D3300737528 /* PreferenceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC943003231E8D3300737528 /* PreferenceType.swift */; };
+		B47CE5BD79823C2C4E31ED9F /* Pods_ios_nice_day.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C973405073A4E6F44F8AD3 /* Pods_ios_nice_day.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC942FDA231E4FCA00737528 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC942FBD231E4FC900737528 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC942FC4231E4FC900737528;
+			remoteInfo = "ios.nice-day";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0ED07BF7B0A08EC0EC6613B6 /* Pods-ios.nice-day.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.nice-day.release.xcconfig"; path = "Target Support Files/Pods-ios.nice-day/Pods-ios.nice-day.release.xcconfig"; sourceTree = "<group>"; };
+		18C973405073A4E6F44F8AD3 /* Pods_ios_nice_day.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_nice_day.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CC59E5A893343FFC7405D3F /* Pods-ios.nice-day.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.nice-day.debug.xcconfig"; path = "Target Support Files/Pods-ios.nice-day/Pods-ios.nice-day.debug.xcconfig"; sourceTree = "<group>"; };
+		AC0608C6231FF35D00B8F9F5 /* RangeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSlider.swift; sourceTree = "<group>"; };
+		AC0608C8231FF43E00B8F9F5 /* RangeSliderTrackLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSliderTrackLayer.swift; sourceTree = "<group>"; };
+		AC0608CA23200AAD00B8F9F5 /* AnimatedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedButton.swift; sourceTree = "<group>"; };
+		AC49059C231FB95D00A82D71 /* WeatherCharacteristic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCharacteristic.swift; sourceTree = "<group>"; };
+		AC49059E231FC39100A82D71 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		AC4905A0231FD96000A82D71 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		AC4905A3231FDAC700A82D71 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		AC942FC5231E4FC900737528 /* ios.nice-day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios.nice-day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC942FC8231E4FC900737528 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AC942FCD231E4FC900737528 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC942FCF231E4FCA00737528 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC942FD2231E4FCA00737528 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AC942FD4231E4FCA00737528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC942FD9231E4FCA00737528 /* ios.nice-dayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios.nice-dayTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC942FDD231E4FCA00737528 /* ios_nice_dayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_nice_dayTests.swift; sourceTree = "<group>"; };
+		AC942FDF231E4FCA00737528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC942FF1231E521C00737528 /* MainPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		AC942FF2231E521C00737528 /* MainInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		AC942FF3231E521C00737528 /* MainRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		AC942FF4231E521C00737528 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AC942FFB231E570A00737528 /* OpenWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherService.swift; sourceTree = "<group>"; };
+		AC942FFD231E5A7C00737528 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		AC943000231E60B500737528 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		AC943003231E8D3300737528 /* PreferenceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceType.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC942FC2231E4FC900737528 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B47CE5BD79823C2C4E31ED9F /* Pods_ios_nice_day.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC942FD6231E4FCA00737528 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03DFD36EA133167E0E65D21C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18C973405073A4E6F44F8AD3 /* Pods_ios_nice_day.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC0608C5231FF33B00B8F9F5 /* Custom controls */ = {
+			isa = PBXGroup;
+			children = (
+				AC0608C6231FF35D00B8F9F5 /* RangeSlider.swift */,
+				AC0608C8231FF43E00B8F9F5 /* RangeSliderTrackLayer.swift */,
+			);
+			path = "Custom controls";
+			sourceTree = "<group>";
+		};
+		AC4905A2231FD96F00A82D71 /* Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				AC4905A0231FD96000A82D71 /* GradientView.swift */,
+				AC0608CA23200AAD00B8F9F5 /* AnimatedButton.swift */,
+			);
+			path = Subclasses;
+			sourceTree = "<group>";
+		};
+		AC942FBC231E4FC900737528 = {
+			isa = PBXGroup;
+			children = (
+				AC942FC7231E4FC900737528 /* ios.nice-day */,
+				AC942FDC231E4FCA00737528 /* ios.nice-dayTests */,
+				AC942FC6231E4FC900737528 /* Products */,
+				EDCB6F1C92BF6C74C180095A /* Pods */,
+				03DFD36EA133167E0E65D21C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AC942FC6231E4FC900737528 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC942FC5231E4FC900737528 /* ios.nice-day.app */,
+				AC942FD9231E4FCA00737528 /* ios.nice-dayTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC942FC7231E4FC900737528 /* ios.nice-day */ = {
+			isa = PBXGroup;
+			children = (
+				AC942FC8231E4FC900737528 /* AppDelegate.swift */,
+				AC942FED231E51BB00737528 /* Modules */,
+				AC942FEF231E51EB00737528 /* Services */,
+				AC942FF0231E51F500737528 /* Assets */,
+				AC942FD4231E4FCA00737528 /* Info.plist */,
+			);
+			path = "ios.nice-day";
+			sourceTree = "<group>";
+		};
+		AC942FDC231E4FCA00737528 /* ios.nice-dayTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC942FDD231E4FCA00737528 /* ios_nice_dayTests.swift */,
+				AC942FDF231E4FCA00737528 /* Info.plist */,
+			);
+			path = "ios.nice-dayTests";
+			sourceTree = "<group>";
+		};
+		AC942FED231E51BB00737528 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				AC942FEE231E51E000737528 /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		AC942FEE231E51E000737528 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AC942FCC231E4FC900737528 /* Main.storyboard */,
+				AC942FF2231E521C00737528 /* MainInteractor.swift */,
+				AC942FF1231E521C00737528 /* MainPresenter.swift */,
+				AC942FF3231E521C00737528 /* MainRouter.swift */,
+				AC942FF4231E521C00737528 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		AC942FEF231E51EB00737528 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AC942FFB231E570A00737528 /* OpenWeatherService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AC942FF0231E51F500737528 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				AC0608C5231FF33B00B8F9F5 /* Custom controls */,
+				AC943002231E60BB00737528 /* Structs + enums */,
+				AC942FFF231E5A8400737528 /* Extensions */,
+				AC4905A2231FD96F00A82D71 /* Subclasses */,
+				AC942FD1231E4FCA00737528 /* LaunchScreen.storyboard */,
+				AC942FCF231E4FCA00737528 /* Assets.xcassets */,
+				AC4905A3231FDAC700A82D71 /* Colors.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		AC942FFF231E5A8400737528 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AC942FFD231E5A7C00737528 /* URL+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AC943002231E60BB00737528 /* Structs + enums */ = {
+			isa = PBXGroup;
+			children = (
+				AC943000231E60B500737528 /* Weather.swift */,
+				AC49059E231FC39100A82D71 /* Preferences.swift */,
+				AC943003231E8D3300737528 /* PreferenceType.swift */,
+				AC49059C231FB95D00A82D71 /* WeatherCharacteristic.swift */,
+			);
+			path = "Structs + enums";
+			sourceTree = "<group>";
+		};
+		EDCB6F1C92BF6C74C180095A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1CC59E5A893343FFC7405D3F /* Pods-ios.nice-day.debug.xcconfig */,
+				0ED07BF7B0A08EC0EC6613B6 /* Pods-ios.nice-day.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC942FC4231E4FC900737528 /* ios.nice-day */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC942FE2231E4FCA00737528 /* Build configuration list for PBXNativeTarget "ios.nice-day" */;
+			buildPhases = (
+				47E6106BA7356094B9137F5A /* [CP] Check Pods Manifest.lock */,
+				AC942FC1231E4FC900737528 /* Sources */,
+				AC942FC2231E4FC900737528 /* Frameworks */,
+				AC942FC3231E4FC900737528 /* Resources */,
+				30D924EBA5CBE591B4BED5D0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ios.nice-day";
+			productName = "ios.nice-day";
+			productReference = AC942FC5231E4FC900737528 /* ios.nice-day.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC942FD8231E4FCA00737528 /* ios.nice-dayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC942FE5231E4FCA00737528 /* Build configuration list for PBXNativeTarget "ios.nice-dayTests" */;
+			buildPhases = (
+				AC942FD5231E4FCA00737528 /* Sources */,
+				AC942FD6231E4FCA00737528 /* Frameworks */,
+				AC942FD7231E4FCA00737528 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC942FDB231E4FCA00737528 /* PBXTargetDependency */,
+			);
+			name = "ios.nice-dayTests";
+			productName = "ios.nice-dayTests";
+			productReference = AC942FD9231E4FCA00737528 /* ios.nice-dayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC942FBD231E4FC900737528 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Frank van Boheemen";
+				TargetAttributes = {
+					AC942FC4231E4FC900737528 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					AC942FD8231E4FCA00737528 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = AC942FC4231E4FC900737528;
+					};
+				};
+			};
+			buildConfigurationList = AC942FC0231E4FC900737528 /* Build configuration list for PBXProject "ios.nice-day" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC942FBC231E4FC900737528;
+			productRefGroup = AC942FC6231E4FC900737528 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC942FC4231E4FC900737528 /* ios.nice-day */,
+				AC942FD8231E4FCA00737528 /* ios.nice-dayTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC942FC3231E4FC900737528 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC942FD3231E4FCA00737528 /* LaunchScreen.storyboard in Resources */,
+				AC4905A4231FDAC700A82D71 /* Colors.xcassets in Resources */,
+				AC942FD0231E4FCA00737528 /* Assets.xcassets in Resources */,
+				AC942FCE231E4FC900737528 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC942FD7231E4FCA00737528 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		30D924EBA5CBE591B4BED5D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios.nice-day/Pods-ios.nice-day-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios.nice-day/Pods-ios.nice-day-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ios.nice-day/Pods-ios.nice-day-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47E6106BA7356094B9137F5A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ios.nice-day-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC942FC1231E4FC900737528 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC943001231E60B500737528 /* Weather.swift in Sources */,
+				AC943004231E8D3300737528 /* PreferenceType.swift in Sources */,
+				AC0608C9231FF43E00B8F9F5 /* RangeSliderTrackLayer.swift in Sources */,
+				AC4905A1231FD96000A82D71 /* GradientView.swift in Sources */,
+				AC942FC9231E4FC900737528 /* AppDelegate.swift in Sources */,
+				AC942FF7231E521C00737528 /* MainRouter.swift in Sources */,
+				AC0608C7231FF35D00B8F9F5 /* RangeSlider.swift in Sources */,
+				AC942FFC231E570A00737528 /* OpenWeatherService.swift in Sources */,
+				AC942FF5231E521C00737528 /* MainPresenter.swift in Sources */,
+				AC942FF6231E521C00737528 /* MainInteractor.swift in Sources */,
+				AC49059F231FC39100A82D71 /* Preferences.swift in Sources */,
+				AC942FFE231E5A7C00737528 /* URL+Extension.swift in Sources */,
+				AC942FF8231E521C00737528 /* MainViewController.swift in Sources */,
+				AC0608CB23200AAD00B8F9F5 /* AnimatedButton.swift in Sources */,
+				AC49059D231FB95D00A82D71 /* WeatherCharacteristic.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC942FD5231E4FCA00737528 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC942FDE231E4FCA00737528 /* ios_nice_dayTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC942FDB231E4FCA00737528 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC942FC4231E4FC900737528 /* ios.nice-day */;
+			targetProxy = AC942FDA231E4FCA00737528 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AC942FCC231E4FC900737528 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC942FCD231E4FC900737528 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AC942FD1231E4FCA00737528 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC942FD2231E4FCA00737528 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC942FE0231E4FCA00737528 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AC942FE1231E4FCA00737528 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC942FE3231E4FCA00737528 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CC59E5A893343FFC7405D3F /* Pods-ios.nice-day.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L695Y8XJX3;
+				INFOPLIST_FILE = "ios.nice-day/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.frankvanboheemen.ios-nice-day";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC942FE4231E4FCA00737528 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ED07BF7B0A08EC0EC6613B6 /* Pods-ios.nice-day.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L695Y8XJX3;
+				INFOPLIST_FILE = "ios.nice-day/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.frankvanboheemen.ios-nice-day";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AC942FE6231E4FCA00737528 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L695Y8XJX3;
+				INFOPLIST_FILE = "ios.nice-dayTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.frankvanboheemen.ios-nice-dayTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios.nice-day.app/ios.nice-day";
+			};
+			name = Debug;
+		};
+		AC942FE7231E4FCA00737528 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L695Y8XJX3;
+				INFOPLIST_FILE = "ios.nice-dayTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.frankvanboheemen.ios-nice-dayTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios.nice-day.app/ios.nice-day";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC942FC0231E4FC900737528 /* Build configuration list for PBXProject "ios.nice-day" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC942FE0231E4FCA00737528 /* Debug */,
+				AC942FE1231E4FCA00737528 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC942FE2231E4FCA00737528 /* Build configuration list for PBXNativeTarget "ios.nice-day" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC942FE3231E4FCA00737528 /* Debug */,
+				AC942FE4231E4FCA00737528 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC942FE5231E4FCA00737528 /* Build configuration list for PBXNativeTarget "ios.nice-dayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC942FE6231E4FCA00737528 /* Debug */,
+				AC942FE7231E4FCA00737528 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC942FBD231E4FC900737528 /* Project object */;
+}
